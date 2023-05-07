@@ -1,0 +1,7 @@
+services:
+  typst:
+    image: ghcr.io/typst/typst:v0.3.0
+    volumes:
+      - ./src/:/workspace/src
+      - ./target:/workspace/target
+    command: typst watch /workspace/src/cv.typ /workspace/target/cv.pdf
